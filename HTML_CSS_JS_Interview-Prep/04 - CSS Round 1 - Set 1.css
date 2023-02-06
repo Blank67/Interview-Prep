@@ -1,0 +1,89 @@
+/* 
+01)What is the Box model in CSS? Which CSS properties are a part of it?
+Ans: A rectangle box is wrapped around every HTML element. The box model is used to determine the height and width of the rectangular box. The CSS Box consists of Width and height (or in the absence of that, default values and the content inside), padding, borders, margin.
+
+02) What is specificity?
+Ans: A process of determining which CSS rule will be applied to an element. It actually determines which rules will take precedence.
+
+03)How to align a block element inside another element? Give code example.
+Ans: Use these CSS:-
+.out{
+  height: 500px;
+  width: 500px;
+  background-color: yellow;
+  position: relative;
+}
+.inner{
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+04)Difference between Static, Relative, Absolute and Fixed position?
+Ans: 
+A) Static: Default value. Here the element is positioned according to the normal flow of the document. (Positioned in normal flow of page, can not moved)
+B) Relative: Here the element is positioned according to the normal flow of the document and positioned relative to its original/ normal position. (Move origin is self)
+C) Absolute: Here the element is positioned relative to its parent element. The final position is determined by the values of left, right, top, bottom. (Move origin is "relative" parent)
+D) Fixed: This is similar to absolute except here the elements are positioned relative to the <html> element. (Move origin is the root element. Fixed even when page is scrolled)
+
+05)Difference between visibility:hidden; and display:none;
+Ans: When we use the attribute “visibility: hidden” for an HTML element then that element will be hidden from the webpage but still takes up space. Whereas, if we use the “display: none” attribute for an HTML element then the element will be hidden, and also it won’t take up any space on the webpage.
+
+06) What is shadow DOM?Give an example.
+Ans: Shadow DOM lets you place the children in a scoped subtree, so document-level CSS can't restyle the element by accident. Eg:
+HTML-> <h3>Welcome to website</h3>
+        <div id="shadowhost">
+            <span id="child">Not part of shadow dom</span>
+        </div>
+
+        <template id="news-widget">
+            <style type="text/css">
+                h3 {
+                    color: green;
+                }
+            </style>
+            <h3>New Widget</h3>
+        </template>
+CSS-> h3{
+    color: blue;
+}
+JS-> const shadowHost = document.getElementById("shadowhost");
+const shadowRoot = shadowHost.createShadowRoot();
+const shadowChild = document.createElement("span");
+shadowChild.innerHTML = document.getElementById("news-widget").innerHTML;
+shadowRoot.appendChild(shadowChild);
+
+07) How to build a triangle in css? Give code example .
+Ans: .tri{
+    height: 0px;
+    width: 0px;
+    border-bottom: 200px solid green;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+}
+
+08) What are pseudo elements?Give Examples.
+Ans: Pseudo-elements allows us to create items that do not normally exist in the document tree. For example if we want to insert content before or after the content of an existing element.
+Eg: HTML-> <div>Hello div </div>
+        <div class="pseudo">Hello div with class </div>
+        <p>Hello p </p>
+    CSS-> .pseudo::after{
+    content: "after is added.";
+}
+p:hover:after{
+    content: "added on hover";
+}
+
+09) What are Data attributes? 
+Ans: Data attributes are the attributes that are capable of storing data unlike other attributes.Eg:
+HTML-> <div class="data" data-name="Blank" data-lName="Last Name">Hello div </div>
+CSS-> .data:hover::after{
+    display: inline-block;
+    content: attr(data-lName);
+}
+
+*/

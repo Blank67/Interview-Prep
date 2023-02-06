@@ -1,0 +1,80 @@
+<!-- 
+01) Are the HTML tags and elements the same thing?
+Ans: An HTML element is defined by a start tag, some content, and an end tag. 
+Eg: <h1>Hello<h1/> this is an element and h1 is a tag. 
+
+02) What are tags and attributes in HTML?
+Ans: HTML tags are used to hold the HTML element. They defines how the content will be structured/ formatted, whereas Attributes are used along with the HTML tags to define the characteristics of the element.
+Eg: <p align=” center”>Interview questions</p> In this align is an attribute whereas <p> is a tag.
+
+
+03) What are void elements in HTML?
+Ans: Void elements are a special group of elements that only have start tags and does not contain any content within it. Void elements can have attributes but not content.
+Eg: <br/>, <hr>, <input />, <img />.
+
+
+04) What are different types of lists in HTML? Explain the difference between each one of them
+Ans: There are three types of lists in HTML namely - Unordered List, Ordered List, Description List.
+A) Unordered List: An Unordered list is used to create a list of related items, in bulleted or unordered format. It starts with the <ul> tag, followed by the <li> tag to show list items inside <ul> tag.
+    Syntax: <ul> 
+                <li>Item 1</li> 
+                <li>Item 2</li> 
+            </ul>
+B) Ordered Lists: The Ordered lists have an order which is either numerical or alphabetical. The <ol> tag is used to create ordered lists in HTML and just like unordered list, we use <li> tag to define or show lists inside <ol> tag.
+    Syntax: <ol> 
+                <li>Item 1</li> 
+                <li>Item 2</li> 
+            </ol>
+C) Description List: A description list is a type of list where each item has a description. It is also known as a definition list. The <dl> tag is used to create description list, the <dt> tag defines the item, and the <dd> tag describes each item in list.
+    Syntax: <dl>
+                <dt>Item 1</dt>
+                <dd>Item 1 description</dd>
+
+                <dt>Item 2</dt>
+                <dd>Item 2 description</dd>
+            </dl>
+
+05) What is the ‘class’ attribute in HTML?What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML elements?
+Ans: The class attribute is used to specify a class name to an HTML element. Multiple elements can have same class. It is mostly used to point to a class in a style sheet. We can also use class attribute to make changes to HTML tag using JS.
+The main difference between id and class attribute is that multiple elements can have same class name but id attribute of one element cannot be associated with another element.
+
+
+06) How to optimize website assets loading?
+Ans: We can optimize our website by optimizing its asset loading. We can acheive that by->
+A) Lazy loading: Instead of loading all assets at once we can load them on the basis of their need.
+B) Utilize a CDN service: Content delivery networks (CDNs) boost website load speed by caching content in many different places around the world. Cache servers of a CDN are typically located closer to end-users than the origin or host server. In place of directly connecting to the hosting server, which may be hundreds of miles away and connected to numerous autonomous networks, requests for material are sent through a CDN server instead.
+C) Minify scripts: This reduces the overall file size of js and CSS files
+D) File compression: This is a method that helps to reduce the size of an asset to reduce the data transfer
+E) Scripts should be placed at the bottom and style sheets at the top: A majority of internet browsers allow for simultaneous downloading of two components at once (images, styles, and scripts). Parallel downloads are usually blocked by scripts, which means you cannot download anything until the script has finished downloading.
+
+
+07) What is the difference between <strong>, <b> tags and <em>, <i> tags?
+Ans: The effect on a normal webpage of the tags <strong>, <b>  and <em>, <i> is the same. <b> and <i> tags stands for bold and italic. These two tags only apply font styling and bold tag <b>, just adds more ink to the text, these tags don't say anything about the text.
+Whereas, <strong> and <em> tags represent that the span of text is of strong importance or more importance and emphatic stress respectively than the rest of the text. These tags have semantic meaning. Basically if we want to show importance we use <strong> and <em> else <b> and <i>.
+
+
+08) What is the significance of <head> and <body> tag in HTML?
+Ans: <head> tag provides the information about the document. It should always be enclosed in the <html> tag. This tag contains the metadata about the webpage and the tags which are enclosed by head tag like <link>, <meta>, <style>, <script>, etc. are not displayed on the web page. Also, there can be only 1 <head> tag in the entire Html document and will always be before the <body> tag.
+<body> tag defines the body of the HTML document. It should always be enclosed in the <html> tag. All the contents which needs to be displayed on the web page like images, text, audio, video, contents, using elements like <p>, <img>, <audio>, <heading>, <video>, <div>, etc. will always be enclosed by the <body> tag. 
+
+
+09) Can we display a web page inside a web page or Is nesting of webpages possible?
+Ans: Yes, this can be acheived using <iframe> tag.
+
+
+10) What are inline elements? What are block level elements? What is the difference between them?
+Ans: Inline elements: Inline elements occupy only enough width that is sufficient to it and allows other elements next to it which are inline. Inline elements don’t start from a new line and don’t have top and bottom margins as block elements have.
+Eg: <span>, <a>, <strong>, <img>, <button>, <em>, <select>, <abbr>, <label>, <sub>, <cite>, <abbr>, <script>, <label>, <i>, <input>, <output>, <q>, etc.
+Block elements: They consume the entire width available irrespective of their sufficiency. They always start in a new line and have top and bottom margins. It does not contain any other elements next to it.
+Eg: <div>, <p>, <header>, <footer>, <h1>...<h6>, <form>, <table>, <canvas>, <video>, <blockquote>, <pre>, <ul>, <ol>, <figcaption>, <figure>, <hr>, <article>, <section>, etc.
+
+
+11) In how many ways can we position an HTML element? What are the permissible values of the position attribute?Explain the exact difference each one of them in your own words. (Watch this video)
+Ans: There are mainly 6 values of position attribute that can be used to position an HTML element:
+A) Static: Default value. Here the element is positioned according to the normal flow of the document. (Positioned in normal flow of page, can not moved)
+B) Relative: Here the element is positioned according to the normal flow of the document and positioned relative to its original/ normal position. (Move origin is self)
+C) Absolute: Here the element is positioned relative to its parent element. The final position is determined by the values of left, right, top, bottom. (Move origin is "relative" parent)
+D) Fixed: This is similar to absolute except here the elements are positioned relative to the <html> element. (Move origin is the root element. Fixed even when page is scrolled)
+E) Initial: This resets the property to its default value.
+F) Inherit: Here the element inherits or takes the property of its parent.
+-->

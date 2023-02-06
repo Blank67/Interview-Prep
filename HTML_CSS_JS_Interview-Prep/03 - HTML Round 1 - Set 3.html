@@ -1,0 +1,65 @@
+<!-- 
+01) Explain the concept of web storage in HTML5. What are the different types of storage and when to use what?
+Ans: This web storage helps in storing some of the static data in the local storage of the browser so that we do not need to fetch it from the server every time we need it. There is a size limit based on different browsers. This helps in decreasing the load time and a smooth user experience. There are two types of web storage that are used to store data locally in HTML5:
+A) Local Storage - This helps in storing data that will be retained even though the user reopens the browser. It is stored for each webapp on different browsers.
+B) Session Storage - This is used for one session only. After the user closes the browser this gets deleted.
+
+02)What is new about the relationship between the <header> and <h1> tags in HTML5?
+Ans: The <header> tag specifies the header section of the webpage. Unlike in previous version there was one <h1> element for the entire webpage, now this is the header for one section such as <article> or <section>. According to the HTML5 specification, each <header> element must at least have one <h1> tag. However, it is not mandatory to include the headings inside the header tag.
+
+03) What are the New tags in Media Elements in HTML5?
+Ans: New tags in media elements are :-
+A) <audio> - Used for sounds, audio streams, or music, embed audio content without any additional plug-in.
+B) <video> - Used for video streams, embed video content etc.
+C) <source> - Used for multiple media resources in media elements, such as audio, video, etc.
+D) <embed> - Used for an external application or embedded content.
+E) <track> - Used for subtitles in the media elements such as video or audio.
+
+04)Why do you think the addition of drag-and-drop functionality in HTML5 is important? How will you make an image draggable in HTML5?
+Ans: The drag and drop functionality is a very intuitive way to select local files. To enable this functionality there is a draggable attribute (set it to true) in the <img> tag and need to set ondrop and ondragover attribute to an eventhandler available in scripts.
+
+05)What are Web Workers?
+Ans: These are added to bring parallelism and async capability. It runs in the background to do the computationally expensive tasks without yielding to make the page responsive. It is achieved by starting a separate thread for such tasks.
+The data is passed between a worker thread and main thread by using onmessage() and postMessage(). postMessage() is used to send data and onmessage() is used to receive that data.
+
+06)What are different approaches to make an image responsive?Explain tit in your own words(This is the way to make images phone ready)
+Ans: The different approaches to making the image responsive are :-
+A) Device pixel-based method: This approach allows you to use multiple versions of the same image with different resolutions and choose the most suitable one to render based on the user's screen resolution. This method is more suitable for devices that don’t render high-resolution images.
+B) Fluid-image method: By default, images are not fluid. They tend to crop or stay at a fixed size when screen size changes. With the fluid-image method, you can insert an image into a responsive layout and give the ability to stretch or scrunch as necessary.
+C) Art Direction method: Art direction is a common issue we face when dealing with different screen sizes. We can address this by altering image content, cropping down the image, or using a different image based on user's screen size.
+D) Type-switching method: There are some browsers and devices that don’t support modern image types like WebP. The type-switching method can be used to switch between image types allowing you to serve the best content to the user based on device and browser compatibility.
+
+07)What is a manifest file in HTML5?
+Ans: The manifest file is used to list down resources that can be cached. Browsers use this information to make the web page load faster than the first time. There are 3 sections in the manifest file.
+A) CACHE Manifest - Files needs to be cached
+B) Network - File never to be cached, always need a network connection.
+C) Fallback - Fallback files in case a page is inaccessible
+
+08) Explain The Key Differences Between LocalStorage And SessionStorage Objects.
+Ans: Difference between localStorage and sessionStorage objects are :- 
+A) In the case of a localStorage object, data will not delete when the browser window closes as it is without an expiry date. However, the data gets deleted if the browser window closes, in the case of sessionStorage objects.
+B) The data in sessionStorage is accessible only in the current window of the browser. But, the data in the localStorage can be shared between multiple windows of the browser.
+
+09) When should we use cookies?
+Ans: Cookies should be used to store the data, that makes experience of the user enriched. Cookies can store upto 4kb of data and are sent with requests that make them powerful.
+We can also use cookies when we want to personalize the website for user, including targeting advertisements which may be of particular interest to user.
+
+10) What is specificity in css?(Important Interview question - watch this)
+Ans: Specificity is like a score/Rank to ultimately decide which style declaration will be applied to the element.
+
+11) How many types of CSS can be included in HTML?
+Ans: There are three types of CSS that can be included in HTML, namely - Inline, Internal, External.
+
+12)What is a style sheet?
+Ans: A style sheet is used to build a consistent, transportable, and well-designed style template. You can add these templates on several different web pages. It describes the look and formatting of a document.
+
+13)Explain the layout of HTML? Where does the header go, where does nav go , where does footer go etc 
+Ans: HTML layout specifies a way in which the web page is arranged. Every website has a specific layout to display content in a specific manner. For example:-
+A) <header>: It is used to define a header for a document or a section.
+B) <nav>: This defines a container for navigation links
+C) <section>: It is used to define a section in a document
+D) <article>: This is used to define an independent, self-contained article
+E) <aside>: It is used to define content aside from the content
+F) <footer>: It is used to define a footer for a document or a section
+
+-->

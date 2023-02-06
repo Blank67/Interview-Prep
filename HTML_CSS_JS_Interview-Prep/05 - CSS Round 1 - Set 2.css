@@ -1,0 +1,195 @@
+/* 
+01) What is zindex?
+Ans: Z-Index  is a CSS property that defines the order of overlapping HTML elements. Elements with a higher index will be placed on top of elements with a lower index. Note: Z index only works on positioned elements ( position:absolute , position:relative , or position:fixed ).
+
+02) Why do we even need it? Where will you use it?
+Ans: Z-Index is used to create a style of visually layered elements such as stack of cards etc. Overlapping elements with a larger z-index cover those with a smaller one.
+
+03) What is the best practice of using it? 
+Ans: Best practice of using it is is that the z-index of every positioned or transformed element should be placed above something appearing later in the document flow will be just 1 or 2, and if the z-index were local, make the local scope – which has a position: relative or transform or the like, set its z-index: 0.
+
+04) https://drive.google.com/file/d/1VQoW4glm0yzXWPDmy4LkjXjuuVaDMbmi/view?usp=sharing (Check hint 1 if stuck forever)
+Ans: 
+HTML -> <ul class="flex">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+CSS -> ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px dotted red;
+    background-color: aqua;
+}
+li{
+    border: 1px solid black;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: white;
+}
+A) .flex{
+    display: flex;
+    flex-direction: column;
+}
+B) .flex{
+    display: flex;
+    flex-direction: column-reverse;
+}
+C) .flex{
+    display: flex;
+    flex-direction: row;
+}
+D) .flex{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+05) https://drive.google.com/file/d/1ee2q7grgqZfuqkzu1XKQkdvr9nN4Ld2_/view?usp=sharing (Check hint 2 if stuck forever)
+Ans: HTML -> <ul class="flex">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+CSS -> ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px dotted red;
+    background-color: aqua;
+    height: 500px;
+}
+li{
+    border: 1px solid black;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: white;
+}
+A) .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+B) .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+C) .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+D) .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+E) .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+06) How can you align a div element in the center of the screen using flexbox?
+Ans: We can align a div element in the center of the screen with flexbox using style ->
+display: flex;
+justify-content: center;
+align-items: center;
+
+07) What are the differnet properties of flex box. Explain each one of them
+Ans: Different properties of flex box are:
+A) display defines a flex container – flex formatting context.
+B) flex-direction defines the main axis inside the container (row or column, default is row).
+C) flex-wrap allows flex items to wrap onto more than one line (default is nowrap).
+D) flex-flow shorthand for flex-direction + flex-wrap.
+E) justify-content allows items to align along main axis.
+F) align-content allows items to align along cross axis in a single line.
+G) align-items aligns multiple lines of items on the cross axis.
+
+08) What is VH/VW (viewport height/ viewport width) in CSS?
+Ans: It’s a CSS unit used to measure the height and width in percentage with respect to the viewport. It is used mainly in responsive design techniques.
+h1{
+    border: 4px solid black;
+    width: 50vw; (This will take 50% width of the viewport that is the screen-size)
+    height: 50vh; (This will take 50% height of the viewport that is the screen-size)
+}
+09) What property is used for changing the font face?
+Ans: We can use the font-family property to change the font face. {font-family: Arial, Helvetica, sans-serif;} here, if we are using Arial font if browser doesn't support that then it will change to Helvetica and so on.
+
+10) When should we use float property in CSS?
+Ans: The float property is used for positioning the HTML elements horizontally either towards the left or right of the container. 
+
+11) What do the following CSS selectors mean?
+    A) div, p -> This will selcet all div and p elements.
+    B) div p -> This will select all p elements in div.
+    C) div ~ p -> This will select all p elements that come after a div. (All p elements that have div elements preceeded anywhere.)
+    D) div + p -> This will select all p elements that come immediately after a div.
+    E) div > p -> This will select all p elements that have div as an immediate parent.
+
+12)How to center align a div inside another div? Write the code by yourself
+Ans: HTML -> <div class="parent"><div class="child"></div></div>
+CSS -> .parent {
+    height: 500px;
+    width: 500px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child {
+    height: 250px;
+    width: 250px;
+    background-color: greenyellow;
+}
+
+13)What does "!important" mean in CSS?
+Ans: The style is having the important will have the highest precedence and it overrides the cascaded property.(In specificity it's order will be on top)
+
+14)What is the difference between CSS2 and CSS3?
+Ans: The main difference between CSS2 and CSS3 is that CSS3 is divided into different sections which are also known as modules. Unlike CSS2, CSS3 modules are supported by many browsers.
+
+*/
