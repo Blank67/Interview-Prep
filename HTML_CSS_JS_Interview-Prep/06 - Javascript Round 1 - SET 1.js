@@ -19,6 +19,14 @@ console.log("b") ;
 Ans: b and after 2 seconds a will be printed.
 
 Question 4: how can you print a first and b later with. You are not allowed to use any extra setTimeouts?
-Ans: 
+Ans: We can use async await to make setTimeout synchronous. Just wrap everything in an async function and use await at setTime out (return log in Promise).
+async function set() {
+    const a = await new Promise((res, rej) => {
+        setTimeout(() => res('a'), 2000);
+    })
+    console.log(a);
+    console.log("b");
+}
+set();
 
 */
